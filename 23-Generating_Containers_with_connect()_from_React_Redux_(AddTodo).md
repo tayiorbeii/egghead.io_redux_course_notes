@@ -14,7 +14,7 @@ We will be creating a container component using `connect()` that will inject the
 
 ##### Before:
 ```JavaScript
-const AddTodo (props, { store }) => {
+const AddTodo = (props, { store }) => {
   .
   . // inside `return`
   .
