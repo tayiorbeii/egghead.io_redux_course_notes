@@ -59,7 +59,7 @@ const { connect } = ReactRedux;
 const VisibleTodoList = connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoApp)
+)(TodoList)
 
 ```
 
