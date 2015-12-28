@@ -30,10 +30,9 @@ const testAddTodo = () => {
       text: 'Learn Redux'
   };
   const stateAfter = [
-      type: 'ADD_TODO',
       id: 0,
       text: 'Learn Redux',
-        completed: false
+      completed: false
   ];
 
   deepFreeze(stateBefore);
