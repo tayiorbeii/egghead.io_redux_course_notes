@@ -63,16 +63,18 @@ AddTodo = connect(
 )(AddTodo);
 ```
 
-Now `AddTodo` won't pass any props dependent on `state`, but it will pass `dispatch()` itself as a function so that the component can read from the props and use it without worrying about context or specifying any `PropTypes`.
+Now `AddTodo` won't pass any props dependent on `state`, but it will pass `dispatch()` itself as a function so that the component can read from the props and use it without worrying about context or specifying any `ContextTypes`.
 
 #### But it's wasteful...
-Why subscribe to the store if we aren't going to calculate props from the state? Because we don't need to subcribe to the store, we can replace the `mapStateToProps` function argument to `connect()` with `null`.
+Why subscribe to the store if we aren't going to calculate props from the state? Because we don't need to subcribe to the store, we can call `connect()` without `mapStateToProps` as an argument. What this does is tell `connect` that there is no need to subscribe to the store.
 
-It's a common pattern to inject just the `dispatch` function, so if `connect()` sees that the second argument is `null`, you'll get `dispatch` injected as a prop.
+It's a common pattern to inject just the `dispatch` function, so if `connect()` sees that the second argument is `null` (or any falsey value), you'll get `dispatch` injected as a prop.
 
-What this means is that we can accomplish the same effect as above by doing this:
+What this means is that we can accomplish the same effect as the above code by removing the arguments from the `connect` function:
 ```JavaScript
 AddTodo = connect()(AddTodo)
 ```
+
+Now the default behavior to not subscribe to the store, and inject `dispatch` as a prop.
 
 [3:43 in the video has the recap.](https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-addtodo)
