@@ -50,13 +50,13 @@ const todo = (state, action) => {
       if (state.id !== action.id) {
         return state;
       }
-    default:
-      return state;
 
       return {
         ...state,
-          completed: !todo.completed
+        completed: !state.completed
       };
+    default:
+      return state;
   }
 }
 ```
@@ -66,12 +66,12 @@ Now that we've extracted our `todo` reducer from our `todos` reducer, we have to
 ```JavaScript
 const todos = (state = [], action) => {
   switch (action.type) {
-    case: 'ADD_TODO':
+    case 'ADD_TODO':
       return [
         ...state,
         todo(undefined, action)
       ];
-    case: 'TOGGLE_TODO':
+    case 'TOGGLE_TODO':
       return state.map(t => todo(t, action));
     default:
       return state;

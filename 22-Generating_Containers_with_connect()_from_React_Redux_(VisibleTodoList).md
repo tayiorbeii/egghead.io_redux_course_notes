@@ -11,7 +11,7 @@ We're going to write `VisibleTodoList` in a different way now.
 
 We'll start by writing a function `mapStateToProps` which takes the Redux store's state, and returns the props that we need to pass to the presentational `TodoList` component so it can be rendered with the current `state`.
 
-In this case, `TodoList` only takes a single prop called `todos`, so we can move the expression into our `mapStateToProps` function. It returns the props that depend on the current state of the Redux store, which in this case is just the `todos`. 
+In this case, `TodoList` only takes a single prop called `todos`, so we can move the expression into our `mapStateToProps` function. It returns the props that depend on the current state of the Redux store, which in this case is just the `todos`.
 
 ```JavaScript
 const mapStateToProps = (state) => {
@@ -42,14 +42,14 @@ const mapDispatchToProps = (dispatch) => {
 ##### Review of what we just did...
 We created a function `mapStateToProps` that maps the Redux store's state to the props of the `TodoList` component that are related to the data from the Redux store.
 
-We also created a function `mapDispatchToProps` that maps the `dispatch()` method of the store to the callback props of our `TodoList` component. It specifies the behavior of which callback prop dispatches which action. 
+We also created a function `mapDispatchToProps` that maps the `dispatch()` method of the store to the callback props of our `TodoList` component. It specifies the behavior of which callback prop dispatches which action.
 
 ##### The `connect()` function
 Together, these two new functions describe a container component so well that instead of writing it we can generate it by using the `connect()` function provided by `react-redux`.
 
 Now instead of creating a `VisibleTodoList` class, we can declare a variable and use the `connect()` method to obtain it. We'll pass in `mapStateToProps` as the first argument, and `mapDispatchToProps` as the second.
 
-This is a [curried function](https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe#.ytohz3iob), so we call it again with the presentational component that we want it to wrap and pass the props to (in this case, `TodoApp`).
+This is a [curried function](https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe#.ytohz3iob), so we call it again with the presentational component that we want it to wrap and pass the props to (in this case, `TodoList`).
 
 
 ```JavaScript
@@ -59,11 +59,11 @@ const { connect } = ReactRedux;
 const VisibleTodoList = connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoApp)
+)(TodoList)
 
 ```
 
-The `connect()` function will generate the component just like the one we wrote by hand, so we don't have to write the code to subscribe to the store or to specify the context types manually. 
+The `connect()` function will generate the component just like the one we wrote by hand, so we don't have to write the code to subscribe to the store or to specify the context types manually.
 
 [3:41 in the video has the recap of what we've just done.](https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-visibletodolist)
 
