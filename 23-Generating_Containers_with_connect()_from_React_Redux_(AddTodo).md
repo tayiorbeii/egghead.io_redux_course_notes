@@ -66,9 +66,9 @@ AddTodo = connect(
 Now `AddTodo` won't pass any props dependent on `state`, but it will pass `dispatch()` itself as a function so that the component can read from the props and use it without worrying about context or specifying any `PropTypes`.
 
 #### But it's wasteful...
-Why subscribe to the store if we aren't going to calculate props from the state? Because we don't need to subcribe to the store, we can replace the `mapStateToProps` function argument to `connect()` with `null`.
+Why subscribe to the store if we aren't going to calculate props from the state? Because we don't need to subcribe to the store, we can replace the `mapStateToProps` function argument to `connect()` with `undefined`.
 
-It's a common pattern to inject just the `dispatch` function, so if `connect()` sees that the second argument is `null`, you'll get `dispatch` injected as a prop.
+It's a common pattern to inject just the `dispatch` function, so if `connect()` sees that the second argument is `undefined` (or `null`), you'll get `dispatch` injected as a prop.
 
 What this means is that we can accomplish the same effect as above by doing this:
 ```JavaScript
