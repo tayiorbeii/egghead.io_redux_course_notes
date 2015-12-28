@@ -50,13 +50,13 @@ const todo = (state, action) => {
       if (state.id !== action.id) {
         return state;
       }
-    default:
-      return state;
 
       return {
         ...state,
-          completed: !todo.completed
+        completed: !state.completed
       };
+    default:
+      return state;
   }
 }
 ```
