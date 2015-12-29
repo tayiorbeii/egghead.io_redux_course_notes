@@ -16,7 +16,7 @@ const testToggleTodo = () => {
   const todoBefore = {
     id: 0,
     text: 'Learn Redux',
-    completed: true
+    completed: false
   };
   const todoAfter = {
     id: 0,
@@ -65,7 +65,7 @@ If there are multiple occurrences of the same property/properties, the last occu
 
 _Remember that ES6 need to be transpiled (at least for the time being)..._
 
-Another open to do the same thing is with the `spread` operator proposed for ES7:
+Another option to do the same thing is with the `spread` operator proposed for ES7:
 ```Javascript
 const toggleTodo = (todo) => {
   return {
