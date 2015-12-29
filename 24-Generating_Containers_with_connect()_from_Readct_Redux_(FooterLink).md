@@ -26,6 +26,7 @@ Notice that `active` now references the `filter` prop of the `FilterLink` compon
 
 It's common to use the container props when calculating the child props, so we pass them in as a second argument to `mapStateToProps`. In this case, we'll rename it to `ownProps` to make it more clear that we are talking about the container component's _own_ props, and not the props that are passed to the child, which is the return value of `mapStateToProps`.
 
+```JavaScript
 const mapStateToLinkProps = (
   state,
   ownProps
