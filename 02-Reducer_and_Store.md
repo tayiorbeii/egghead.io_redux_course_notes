@@ -53,7 +53,7 @@ function counter = (state = 0, action) => {
     default:
       return state;
   }
-} 
+}
 
 // ... `expect` statements as above ...
 ```
@@ -72,7 +72,7 @@ function counter = (state = 0, action) => {
     default:
       return state;
   }
-} 
+}
 
 const { createStore } = Redux; // Redux CDN import syntax
 // import { createStore } from 'redux' // npm module syntax
@@ -90,9 +90,9 @@ In this example, we call `createStore` with `counter` as the reducer that manage
 #### `store` has 3 important methods:
 1. `getState()` retrieves the current state of the Redux store. If we ran `console.log(store.getState())` with the code above, we could get `0` since it is the initial state of our application.
 
-2. `dispatch()` is the most commonly used. It is how we dispatch actions to change the state of the application. If we run `store.dispatch( { type: 'INCREMENT' });` followed by `console.log(store.getState());` we will get `1` since 
+2. `dispatch()` is the most commonly used. It is how we dispatch actions to change the state of the application. If we run `store.dispatch( { type: 'INCREMENT' });` followed by `console.log(store.getState());` we will get `1` since
 
-3. `subscribe()` allows us to render the body of the page instead of just logging to console. 
+3. `subscribe()` registers a callback that the redux store will call any time any time an action has been dispatched so you can update the UI of your application to reflect the current application state.
 
 ```JavaScript
 // ... `counter` reducer as above ...
@@ -109,7 +109,7 @@ document.addEventListener('click', () => {
 });
 ```
 
-The way the code is above, the initial state (`0`) is not rendered to the body. This is because the render happens inside the `subscribe()` function. This can be remedied by refactoring like so:
+The way the code is above, the initial state (`0`) is not rendered to the body, as the rendering occurs in the subscribe callback. This can be remedied by refactoring like so:
 
 ```JavaScript
 const render = () => {
@@ -117,8 +117,9 @@ const render = () => {
 };
 
 store.subscribe(render);
-render();
+render(); // calling once to render the initial state (0), then the subscribe will update subsequently
 
-// ... `addEventListener` as above ...
+document.addEventListener('click', () => {
+    store.dispatch({ type : 'INCREMENT' })
+});
 ```
-
