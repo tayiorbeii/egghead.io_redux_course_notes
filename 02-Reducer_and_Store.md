@@ -44,7 +44,7 @@ When writing a reducer, if `state` is not defined, return an object representing
 The above code can be rewritten more concisely using ES6 notation and a switch statement:
 
 ```JavaScript
-function counter = (state = 0, action) => {
+const counter = (state = 0, action) => {
   switch (action.type) {
     case 'INCREMENT':
       return state + 1;
@@ -63,7 +63,7 @@ function counter = (state = 0, action) => {
 This section makes use of functions built into Redux. We bring in `createStore` using the ES6 destructuring syntax.
 
 ```JavaScript
-function counter = (state = 0, action) => {
+const counter = (state = 0, action) => {
   switch (action.type) {
     case 'INCREMENT':
       return state + 1;
