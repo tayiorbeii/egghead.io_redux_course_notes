@@ -6,9 +6,9 @@ We just used the `createStore()` function, but in order to understand it better,
 
 We know that we need to pass in the `reducer` function, and that `getState()` will return the current value of `state`. We also know that we need to be able to dispatch actions, and subscribe.
 
-Because the `subscribe()` function can be called many times, we need to keep track of all the change listeners, so we create an array that is pushed into whenever `subcribe()` is called.
+Because the `subscribe()` function can be called many times, we need to keep track of all the change listeners, so we create an array (listeners) that, when called, will push in the new listener to the array.
 
-Dispatching an action is the only way to change the internal state, so we assign state to the result of calling `reducer()` with the current `state` and the `action` being dispatched. After the `state` is updated, we notify every change listener by calling them.
+Dispatching an action is the only way to change the internal state, so we calculate the new state as the result of calling `reducer()` with the current `state` and the `action` being dispatched. After the `state` is updated, we notify every change listener by calling them.
 
 In order to unsubscribe an event listener, we'll return a function from the `subscribe()` method that removes the listener from the listeners array.
 
