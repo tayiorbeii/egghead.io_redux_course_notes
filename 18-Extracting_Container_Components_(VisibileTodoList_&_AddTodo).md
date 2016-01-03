@@ -68,7 +68,7 @@ const AddTodo = () => {
           store.dispatch({
             type: 'ADD_TODO',
             id: nextTodoId++,
-            text
+            text: input.value
           })
         input.value = '';
       }}>
