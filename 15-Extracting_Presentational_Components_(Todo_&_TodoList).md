@@ -105,7 +105,7 @@ const Todo = ({
     onClick={onClick}
     style={{
       textDecoration:
-        todo.completed ?
+        completed ?
           'line-through' :
           'none'
     }}
