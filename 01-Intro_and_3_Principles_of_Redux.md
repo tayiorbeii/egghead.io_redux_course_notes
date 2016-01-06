@@ -55,6 +55,8 @@ Contrast the "Impure" function. A database is called, and values passed in are b
 This distinction is important to understand, since Redux requires that certain functions are pure.
 
 # 04. The Reducer Function
+[Video Link](https://egghead.io/lessons/javascript-redux-the-reducer-function)
+
 React introduced the idea that the UI layer is most predictable when it is described as a pure function of the application's state.
 
 Redux compliments this approach by requiring that state mutations in your app need to be described by a pure function that takes the previous state and the action being dispatched, and returns the next state of your application.
