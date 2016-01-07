@@ -29,11 +29,11 @@ const testAddTodo = () => {
       id: 0,
       text: 'Learn Redux'
   };
-  const stateAfter = [
+  const stateAfter = [{
       id: 0,
       text: 'Learn Redux',
       completed: false
-  ];
+  }];
 
   deepFreeze(stateBefore);
   deepFreeze(action);
