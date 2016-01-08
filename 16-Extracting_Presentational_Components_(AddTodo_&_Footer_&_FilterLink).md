@@ -205,7 +205,7 @@ return (
       visibilityFilter={visibilityFilter}
       onFilterClick={filter =>
         store.dispatch({
-          type: 'SET_VISIBILITY_FILTER'
+          type: 'SET_VISIBILITY_FILTER',
           filter
         })
       }
@@ -229,7 +229,7 @@ Since the `visibleTodos` are only used in a single place, we can move its declar
 const TodoApp = ({
   todos,
   visibilityFilter
-}) =>
+}) => {
   return (
     <div>
       <AddTodo
@@ -259,13 +259,14 @@ const TodoApp = ({
         visibilityFilter={visibilityFilter}
         onFilterClick={filter =>
           store.dispatch({
-            type: 'SET_VISIBILITY_FILTER'
+            type: 'SET_VISIBILITY_FILTER',
             filter
           })
         }
       />
     </div>
   );
+}
 ```
 
 #### Recap of the Data Flow
