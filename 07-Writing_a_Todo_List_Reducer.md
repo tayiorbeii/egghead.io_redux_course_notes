@@ -48,13 +48,13 @@ console.log('All tests passed')
 ```
 
 #### Data Flow:
-First, we create an empty state array (`stateBefore`) and our `action` object inside the test function. 
+First, we create an empty state array (`stateBefore`) and our `action` object inside the test function.
 
-Next, they are passed into our `todos` reducer function, which notices that our action type of `'ADD_TODO'` is recognized. 
+Next, they are passed into our `todos` reducer function, which notices that our action type of `'ADD_TODO'` is recognized.
 
-The reducer returns a new array containing the same items as the old array, as well as a new item representing the Todo we just added. Note that since we passed in an empty array (`stateBefore = []`) we are returned a single item array. 
+The reducer returns a new array containing the same items as the old array, as well as a new item representing the Todo we just added. Note that since we passed in an empty array (`stateBefore = []`) we are returned a single item array.
 
-Finally, our new array is compared with our expected array with our single Todo item. 
+Finally, our new array is compared with our expected array with our single Todo item.
 
 
 # 12. Writing a Todo List Reducer (Toggling a Todo)
@@ -71,12 +71,14 @@ const todos = (state = [], action) => {
       return state.map(todo => {
         if (todo.id !== action.id) {
           return todo;
+        } else {
+// for the todo that matches the action id return all other information the same
+// but change the completed property to the opposite of what it was previously
+          return {
+            ...todo,
+            completed: !todo.completed
+          };
         }
-
-        return {
-          ...todo,
-          completed: !todo.completed
-        };
       });
     default:
       return state;
