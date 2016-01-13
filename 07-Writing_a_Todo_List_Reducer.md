@@ -65,9 +65,9 @@ Now we will handle toggling Todos by adding to our above code.
 ```JavaScript
 const todos = (state = [], action) => {
   switch (action.type) {
-    case: 'ADD_TODO'
+    case 'ADD_TODO'
       // ... ADD_TODO logic as above
-    case: 'TOGGLE_TODO':
+    case 'TOGGLE_TODO':
       return state.map(todo => {
         if (todo.id !== action.id) {
           return todo;
