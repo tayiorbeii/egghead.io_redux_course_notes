@@ -7,7 +7,7 @@ While storing the application's state with just an array may work for small appl
 
 For example, we can add a visibility filter to our Todo application. The state of the visibility filter is a simple string representing the current filter. The filter is changed via the `SET_VISIBILITY_FILTER` action. 
 ```JavaScript
-const VisibilityFilter = (
+const visibilityFilter = (
     state = 'SHOW_ALL',
     action
 ) => {
