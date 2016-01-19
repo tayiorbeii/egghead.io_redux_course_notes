@@ -19,7 +19,7 @@ Once the store has been created, our container components get data from it by ca
 
 Having all of our code in a single file works well for a simple example, but it doesn't scale very well.
 
-First, it makes our components harder to test because they'll reference a specific store, but we may want to provide a different mock store in the tests. 
+First, it makes our components harder to test because they'll reference a specific store, but we may want to provide a different mock store in the tests.
 
 Second, it makes it hard to implement Universal applications that are rendered on the server, because on the server we'll want to supply a different `store` instance for every request, because different requests have different data.
 
@@ -59,9 +59,9 @@ const TodoApp = ({ store }) => (
 );
 ```
 
-The problem with doing it this way is that the container components need to have the `store` instance to get `state` from it, dispatch actions, and subscribe to changes. 
+The problem with doing it this way is that the container components need to have the `store` instance to get `state` from it, dispatch actions, and subscribe to changes.
 
-Now inside of each of the components inside of `TodoApp` we need to adjust our container components to take the `store` from the `props`:
+Now inside of each of the components inside of `TodoApp` we need to adjust our container components to take the `store` from the `props` in both `componentDidMount()`, and `render()`:
 
 ```JavaScript
 class VisibleTodoList extends Component {
@@ -94,6 +94,9 @@ const AddTodo = ({ store }) => {
 }
 ```
 
+Though `Footer` itself does not need the store, we must give it to `Footer` so we
+can pass it to `FilterLink`
+
 ```JavaScript
 const Footer = ({ store }) => {
   <p>
@@ -113,7 +116,7 @@ const Footer = ({ store }) => {
 class FilterLink extends Component {
   componentDidMount() {
     const { store } = this.props;
-    this.unsubscribe = store.subscribe(() => 
+    this.unsubscribe = store.subscribe(() =>
       this.forceUpdate()
     );
   }
@@ -136,5 +139,3 @@ Now all of our components are receiving `state` via their props instead of relyi
 Note that this change did not change the behavior of the data flow of the application. The containers subscribe to `store` and update like they did before. What changed is _how_ they get the store.
 
 Soon we will see how to pass `store` to the container components implicitly, but for now, this is where we're at.
-
-
