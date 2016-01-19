@@ -32,7 +32,7 @@ expect (
 ).toEqual(1);
 
 expect (
-  counter(1, { type: 'INCREMENT' })
+  counter(1, { type: 'DECREMENT' })
 ).toEqual(0);
 
 expect (
