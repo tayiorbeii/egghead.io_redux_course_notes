@@ -51,7 +51,12 @@ We also created a function `mapDispatchToProps` that maps the store's `dispatch(
 ##### The `connect()` function
 Together, these two new functions describe a container component so well that instead of writing it we can generate it by using the `connect()` function provided by `react-redux`.
 
-Now instead of creating a `VisibleTodoList` class, we can declare a variable and use the `connect()` method to obtain it. We'll pass in `mapStateToProps` as the first argument, and `mapDispatchToProps` as the second. As this is a [curried function](https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe#.ytohz3iob), so we must call it again, passing in the presentational component that we want it to wrap and pass the props to (in this case, `TodoList`).
+Now instead of creating a `VisibleTodoList` class, we can declare a variable and use the `connect()` method to obtain it. We'll pass in `mapStateToProps` as the first argument, and `mapDispatchToProps` as the second. As this is a [curried function](https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe#.ytohz3iob), we must call it again, passing in the presentational component that we want it to wrap and pass the props, thereby connecting to the redux store (in this case, `TodoList`).
+
+The result of the connect call is the container component that is going to render the
+presentational component. It will calculate the props to pass to the
+presentational component by merging the objects returned from `mapStateToProps`,
+`mapDispatchToProps`, and its own props
 
 ```JavaScript
 const { connect } = ReactRedux;
