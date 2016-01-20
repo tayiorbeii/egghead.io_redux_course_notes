@@ -72,8 +72,7 @@ class VisibleTodoList extends Component {
   }
 }
 ```
-**Note:** The `context` is opt-in for all components, so we have to specify `contextTypes`. If you don't specify this, the component won't received the relevant context, so it is
-essential to declare them!
+**Note:** The `context` is opt-in for all components, so we have to specify `contextTypes`. If you don't specify this, the component won't received the relevant context, so it is essential to declare them!
 
 ```JavaScript
 VisibleTodoList.contextTypes = {
