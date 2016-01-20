@@ -34,7 +34,7 @@ const combineReducers = reducers => {
 };
 ```
 
-Call combineReducers with an object who's values are the reducer functions and keys are state fields they manage.
+Call combineReducers with an object whose values are the reducer functions and keys are state fields they manage.
 
 ```JavaScript
 const todoApp = combineReducers({
