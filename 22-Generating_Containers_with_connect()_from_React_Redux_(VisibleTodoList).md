@@ -24,33 +24,39 @@ const mapStateToProps = (state) => {
 }
 ```
 
-Now we'll create another function called `mapDispatchToProps` that accepts the `dispatch()` from `store` as its only argument. It returns the props that should be passed to the `TodoList` component that depend on the `dispatch()` method. In the case of `TodoList`, the only prop that `TodoList` took that requires `store.dispatch()` is `onTodoClick`. So we will remove `onTodoClick` from `TodoList` and put it into `mapDispatchToProps`'s `return`. Note that we don't need the reference to `store` anymore, and can just use `dispatch`.
+Now we'll create another function called `mapDispatchToProps` that accepts the `dispatch()` from `store` as its only argument. It returns the props that should be passed to the `TodoList` component that depend on the `dispatch()` method. In the case of `TodoList`, the only prop that `TodoList` took that requires `store.dispatch()` is `onTodoClick`. So we will remove `onTodoClick` from `TodoList` and put it into `mapDispatchToProps`'s `return`. Note that we don't need the reference to `store` anymore, and can just change `store.dispatch()` to just `dispatch()`, which is provided as an argument to `matchDispatchToProps`.
 
 ```JavaScript
 const mapDispatchToProps = (dispatch) => {
   return {
-    onTodoClick: id => {
+    onTodoClick: (id) => {
       dispatch({
         type: 'TOGGLE_TODO',
         id
       })
     }
   };
-}
+};
 ```
 
 ##### Review of what we just did...
-We created a function `mapStateToProps` that maps the Redux store's state to the props of the `TodoList` component that are related to the data from the Redux store.
 
-We also created a function `mapDispatchToProps` that maps the `dispatch()` method of the store to the callback props of our `TodoList` component. It specifies the behavior of which callback prop dispatches which action.
+We now have two functions:
+
+A function `mapStateToProps` that maps the Redux store's state to the props of the `TodoList` component that are related to the data from the Redux store. These props
+will be updated any time the state changes
+
+We also created a function `mapDispatchToProps` that maps the store's `dispatch()` method of and returns the props that use the dispatch method to dispatch actions. So it returns the callback props needed by the presentational component. It specifies the behavior of which callback prop dispatches which action.
 
 ##### The `connect()` function
 Together, these two new functions describe a container component so well that instead of writing it we can generate it by using the `connect()` function provided by `react-redux`.
 
-Now instead of creating a `VisibleTodoList` class, we can declare a variable and use the `connect()` method to obtain it. We'll pass in `mapStateToProps` as the first argument, and `mapDispatchToProps` as the second.
+Now instead of creating a `VisibleTodoList` class, we can declare a variable and use the `connect()` method to obtain it. We'll pass in `mapStateToProps` as the first argument, and `mapDispatchToProps` as the second. As this is a [curried function](https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe#.ytohz3iob), we must call it again, passing in the presentational component that we want it to wrap and pass the props, thereby connecting to the redux store (in this case, `TodoList`).
 
-This is a [curried function](https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe#.ytohz3iob), so we call it again with the presentational component that we want it to wrap and pass the props to (in this case, `TodoList`).
-
+The result of the connect call is the container component that is going to render the
+presentational component. It will calculate the props to pass to the
+presentational component by merging the objects returned from `mapStateToProps`,
+`mapDispatchToProps`, and its own props
 
 ```JavaScript
 const { connect } = ReactRedux;
@@ -66,5 +72,3 @@ const VisibleTodoList = connect(
 The `connect()` function will generate the component just like the one we wrote by hand, so we don't have to write the code to subscribe to the store or to specify the context types manually.
 
 [3:41 in the video has the recap of what we've just done.](https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-visibletodolist)
-
-

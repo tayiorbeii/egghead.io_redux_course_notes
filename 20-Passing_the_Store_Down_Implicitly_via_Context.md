@@ -27,7 +27,7 @@ ReactDOM.render(
 ```
 Now we will update our `Provider` component to use React's context feature. This is what makes the store available to any component that it renders. The `store` now be available for any of the children and grandchildren of the components `Provider` renders (in our example, this is `TodoApp` and all of the other components and containers we've built inside of it!)
 
-There is one more thing to add to make it work. We have to provide `childContextTypes` on the component that provides child context. This is similar to React's `PropTypes` definition that helps you when writing your app, except that in this case it is required in order for the child components to receive context.
+There is an important condition that must be added to make it work. We have to provide `childContextTypes` on the component that provides child context. This is similar to React's `PropTypes` definition that helps you when writing your app, except that in this case it is *required* in order for the child components to receive context.
 
 ```JavaScript
 class Provider extends Component {
@@ -72,7 +72,8 @@ class VisibleTodoList extends Component {
   }
 }
 ```
-**Note:** The `context` is opt-in for all components, so we have to specify `contextTypes`. If you don't specify this, the component won't received the relevant context!
+**Note:** The `context` is opt-in for all components, so we have to specify `contextTypes`. If you don't specify this, the component won't received the relevant context, so it is essential to declare them!
+
 ```JavaScript
 VisibleTodoList.contextTypes = {
   store: React.PropTypes.object;
@@ -80,9 +81,11 @@ VisibleTodoList.contextTypes = {
 ```
 
 #### Updating our Functional Components for `context`
-Our functional components don't have `this`, so how will we give them `context`? 
+Our functional components don't have `this`, so how will we give them `context`?
 
-It turns out that they receive context as a second argument (after `props`). We also need to add `contextTypes` for the component that specifies which context we want to receive (in this case `store` from `Provider`).
+It turns out that they receive context as a second argument (after `props`). We also need to add `contextTypes` for the component that specifies which context we want to receive (in this case `store` from `Provider`). Context can be passed down to any level, so you can
+think of it as creating a 'wormhole' to whatever component that uses it, however, you
+must remember to opt-in by declaring the contextTypes
 
 ```JavaScript
 const AddTodo = (props, { store }) => {
@@ -95,12 +98,16 @@ AddTodo.contextTypes = {
   store: React.PropTypes.object;
 }
 ```
+
+We must also convert `FilterLink` to accept the store from context and
+provide the contextTypes
+
 ##### Updating `FilterLink`
 ```JavaScript
 class FilterLink extends Component {
   componentDidMount() {
     const { store } = this.context;
-    this.unsubscribe = store.subscribe(() => 
+    this.unsubscribe = store.subscribe(() =>
       this.forceUpdate()
     );
   }
@@ -120,7 +127,8 @@ FilterLink.contextTypes = {
   store: React.PropTypes.object;
 }
 ```
-**Note:**  `Footer` and Individual `<FilterLink>` elements don't need `store` as a prop anymore:
+
+**Note:**  `Footer` and Individual `<FilterLink>` elements don't need `store` as a prop anymore as we don't need to pass it down, so we can remove that from the props:
 
 ```JavaScript
 const Footer = () => {
@@ -158,4 +166,3 @@ Now we are implictly passing `store` down via context instead of having to expli
 Context is a powerful feature, but in a way it contradicts the React philosophy of having an explicit data flow. The context essentially allows global variables across the component tree. Global variables are usually a bad idea, and you shouldn't use the context feature in this way. You should only use context if you're using it for dependency injection (like in our case where we need to make a single object available to all components).
 
 Finally, it is important to note that the `context` API is not stable in React. It has changed before, and it is likely to change again, so it is probably best to not rely on it too much.
-
