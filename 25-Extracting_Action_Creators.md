@@ -3,7 +3,7 @@
 
 So far we've covered container components, presentational components, reducers, and the store... but we haven't covered *action creators*.
 
-In our current `AddTodo` component, we dispatch an action of type `'ADD_TODO'` when the "Add Todo" button is clicked. However, it references the `nextTodoId` variable which is declared alongside the component. Normally it would be local, but what if another component wants to be able to dispatch `'ADD_TODO'`? The component would need to have access to `nextTodoId`. 
+In our current `AddTodo` component, we dispatch an action of type `'ADD_TODO'` when the "Add Todo" button is clicked. However, it references the `nextTodoId` variable which is declared alongside the component. Normally it would be local, but what if another component wants to be able to dispatch `'ADD_TODO'`? The component would need to have access to `nextTodoId`.
 
 
 ##### Existing `AddTodo` Code
@@ -31,7 +31,7 @@ let AddTodo = ({ dispatch }) => {
   );
 };
 ```
-In order to allow other components to dispatch the `'ADD_TODO'` action, it would be best if `'ADD_TODO'` didn't have to worry about specifying the `id`. The only information that really is passed is the `text` of the todo being added. We don't want to generate the `id` inside of the reducer because that would make it [non-deterministic](https://en.wikipedia.org/wiki/Nondeterministic_algorithm). 
+In order to allow other components to dispatch the `'ADD_TODO'` action, it would be best if `'ADD_TODO'` didn't have to worry about specifying the `id`. The only information that really is passed is the `text` of the todo being added. We don't want to generate the `id` inside of the reducer because that would make it [non-deterministic](https://en.wikipedia.org/wiki/Nondeterministic_algorithm).
 
 
 #### Action Creator
@@ -138,6 +138,4 @@ const mapDispatchToTodoListProps = (
 #### Recap
 Keeping all of our action creators together in one place helps to inform others who look at our code what actions are capable of taking place. They can also be used by different components, as well as in tests.
 
-Whether you use action creators or not, the data flow is the same. 
-
-
+Whether you use action creators or not, the data flow is the same.

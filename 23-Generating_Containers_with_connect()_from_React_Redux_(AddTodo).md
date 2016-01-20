@@ -1,7 +1,7 @@
 # 28. Generating Containers with `connect()` from React Redux (AddTodo)
 [Video Link](https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-addtodo)
 
-In the last section we used `connect()` to set up our `VisibleTodoList` component. 
+In the last section we used `connect()` to set up our `VisibleTodoList` component.
 
 Since these examples have all of our JavaScript written in a single file, we need to rename our `mapStateToProps` and `mapDispatchToProps` functions to be more specific. Note that this doesn't need to be done if we keep all of our components in separate files.
 
@@ -66,7 +66,7 @@ AddTodo = connect(
 Now `AddTodo` won't pass any props dependent on `state`, but it will pass `dispatch()` itself as a function so that the component can read from the props and use it without worrying about context or specifying any `ContextTypes`.
 
 #### But it's wasteful...
-Why subscribe to the store if we aren't going to calculate props from the state? Because we don't need to subcribe to the store, we can call `connect()` without `mapStateToProps` as an argument. What this does is tell `connect` that there is no need to subscribe to the store.
+Why subscribe to the store if we aren't going to calculate props from the state? Because we don't need to subcribe to the store, we can call `connect()` without `mapStateToProps` as an argument, instead passing in `null`. What this does is tell `connect` that there is no need to subscribe to the store.
 
 It's a common pattern to inject just the `dispatch` function, so if `connect()` sees that the second argument is `null` (or any falsey value), you'll get `dispatch` injected as a prop.
 
