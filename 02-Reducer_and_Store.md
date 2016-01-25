@@ -92,7 +92,7 @@ In this example, we call `createStore` with `counter` as the reducer that manage
 
 2. `dispatch()` is the most commonly used. It is how we dispatch actions to change the state of the application. If we run `store.dispatch( { type: 'INCREMENT' });` followed by `console.log(store.getState());` we will get `1` since
 
-3. `subscribe()` registers a callback that the redux store will call any time any time an action has been dispatched so you can update the UI of your application to reflect the current application state.
+3. `subscribe()` registers a callback that the redux store will call any time an action has been dispatched so you can update the UI of your application to reflect the current application state.
 
 ```JavaScript
 // ... `counter` reducer as above ...
