@@ -22,7 +22,7 @@ const FilterLink = ({
        onClick={e => {
          e.preventDefault();
          store.dispatch({
-           type: 'SET_VISIBILITY_FILTER'
+           type: 'SET_VISIBILITY_FILTER',
            filter
          });
        }}
