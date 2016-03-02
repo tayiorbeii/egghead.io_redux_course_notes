@@ -76,7 +76,7 @@ class VisibleTodoList extends Component {
 
 ```JavaScript
 VisibleTodoList.contextTypes = {
-  store: React.PropTypes.object;
+  store: React.PropTypes.object
 }
 ```
 
@@ -95,7 +95,7 @@ const AddTodo = (props, { store }) => {
 }
 
 AddTodo.contextTypes = {
-  store: React.PropTypes.object;
+  store: React.PropTypes.object
 }
 ```
 
@@ -124,7 +124,7 @@ class FilterLink extends Component {
   }
 }
 FilterLink.contextTypes = {
-  store: React.PropTypes.object;
+  store: React.PropTypes.object
 }
 ```
 
