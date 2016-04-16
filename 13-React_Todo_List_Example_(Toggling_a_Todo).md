@@ -1,5 +1,5 @@
 # 18. React Todo List Example (Toggling a Todo)
-[Video Link](https://egghead.io/lessons/javascript-redux-react-todo-list-example-adding-a-todo)
+[Video Link](https://egghead.io/lessons/javascript-redux-react-todo-list-example-toggling-a-todo)
 
 Building onto what we've been working on, it's time to dispatch our `'TOGGLE_TODO'` action. We will do this by clicking on the individual todo items in our bulleted list.
 
