@@ -1,4 +1,5 @@
 # 21. Extracting Presentational Components (AddTodo, Footer, FilterLink)
+[video link](https://egghead.io/lessons/javascript-redux-extracting-presentational-components-addtodo-footer-filterlink)
 
 We've refactored `TodoApp` to use a `TodoList` component.
 
