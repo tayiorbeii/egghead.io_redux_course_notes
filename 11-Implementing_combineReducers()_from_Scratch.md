@@ -1,4 +1,5 @@
 # 16. Implementing `combineReducers()` from Scratch
+[Video Link](https://egghead.io/lessons/javascript-redux-implementing-combinereducers-from-scratch)
 
 Now that we know how to use `combineReducers()` to save us some time, let's implement it from scratch in order to understand it deeper.
 
