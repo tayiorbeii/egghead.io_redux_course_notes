@@ -224,7 +224,7 @@ Note that when the action is of type `'SET_VISIBILITY_FILTER'`, it doesn't care 
 
 Because the `render()` function is subscribed to changes in `store`, it's going to get the new `state` object and pass all its keys as props to the `TodoApp` component.
 
-The `TodoApp` component receives all the `todos` as well as the newly updated `visibilityFilter` as its props, which are then passed to the `getVisibleTodos()` function The currently visibile `todos` are calculated based on the current visibilty filter (`'SHOW_ALL'`, `'SHOW_COMPLETED'`, or `'SHOW_ACTIVE'`).
+The `TodoApp` component receives all the `todos` as well as the newly updated `visibilityFilter` as its props, which are then passed to the `getVisibleTodos()` function The currently visible `todos` are calculated based on the current visibilty filter (`'SHOW_ALL'`, `'SHOW_COMPLETED'`, or `'SHOW_ACTIVE'`).
 
 Depending on which filter is selected, `getVisibleTodos()` may return a brand new array of `todos` containing only the appropriate items. This returned array is then enumerated and rendered inside of `TodoApp`'s `render()` function.
 
