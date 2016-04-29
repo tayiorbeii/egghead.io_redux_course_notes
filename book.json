@@ -1,0 +1,5 @@
+{
+  "title": "egghead.io - Redux Fundamentals Course Guide",
+  "description": "This repo contains notes from [Dan Abramov](https://github.com/gaearon)'s _excellent_ [Redux video series](https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree).",
+  "plugins" : ["advanced-emoji","prism", "-highlight", "hints"]
+}

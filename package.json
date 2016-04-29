@@ -1,0 +1,26 @@
+{
+  "name": "egghead.io_redux_course_notes",
+  "version": "1.0.0",
+  "description": "This repo contains notes from [Dan Abramov](https://github.com/gaearon)'s _excellent_ [Redux video series](https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggheadio/egghead.io_redux_course_notes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eggheadio/egghead.io_redux_course_notes/issues"
+  },
+  "homepage": "https://github.com/eggheadio/egghead.io_redux_course_notes#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "gitbook-plugin-advanced-emoji": "^0.1.6",
+    "gitbook-plugin-hints": "^1.0.1",
+    "gitbook-plugin-prism": "^1.0.0"
+  }
+}
