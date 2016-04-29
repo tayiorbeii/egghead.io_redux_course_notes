@@ -8,3 +8,10 @@ Some of these documents contain multiple sections, but the majority are "one doc
 For a working final product of these lessons, visit [@sadams' `todo-redux-react-webpack` repo](https://github.com/sadams/todo-redux-react-webpack).
 
 ### Feel free to submit a PR!
+
+### Gitbook
+
+`npm i -g gitbook-cli`
+`npm install`
+`gitbook install`
+`gitbook serve`
