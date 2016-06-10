@@ -25,7 +25,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
-Now we will update our `Provider` component to use React's context feature. This is what makes the store available to any component that it renders. The `store` now be available for any of the children and grandchildren of the components `Provider` renders (in our example, this is `TodoApp` and all of the other components and containers we've built inside of it!)
+Now we will update our `Provider` component to use React's context feature. This is what makes the store available to any component that it renders. Now the `store` will be available to any of the children and grandchildren of the components `Provider` renders (in our example, this is `TodoApp` and all of the other components and containers we've built inside of it!)
 
 There is an important condition that must be added to make it work. We have to provide `childContextTypes` on the component that provides child context. This is similar to React's `PropTypes` definition that helps you when writing your app, except that in this case it is *required* in order for the child components to receive context.
 
