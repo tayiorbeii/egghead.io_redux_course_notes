@@ -11,7 +11,9 @@ For a working final product of these lessons, visit [@sadams' `todo-redux-react-
 
 ### Gitbook
 
-`npm i -g gitbook-cli`
-`npm install`
-`gitbook install`
-`gitbook serve`
+```
+npm i -g gitbook-cli
+npm install
+gitbook install
+gitbook serve
+```
