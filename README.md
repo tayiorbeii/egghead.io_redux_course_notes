@@ -1,3 +1,5 @@
+![](./images/EGH_Redux_Notes_500.png)
+
 # Egghead.io Redux Course Notes
 This repo contains notes from [Dan Abramov](https://github.com/gaearon)'s _excellent_ [Redux video series](https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree).
 
