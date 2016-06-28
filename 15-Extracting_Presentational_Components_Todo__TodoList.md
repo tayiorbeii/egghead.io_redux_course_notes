@@ -9,7 +9,7 @@ We are going to refactor this single component into separate pieces so that they
 
 ```JavaScript
 class TodoApp extends Component {
-	render () {
+  render () {
     const {
       todos,
       visibilityFilter
