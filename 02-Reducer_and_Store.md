@@ -38,6 +38,10 @@ expect (
 expect (
     counter(1, { type: 'SOMETHING_ELSE' })
 ).toEqual(1);
+
+expect (
+  counter(undefined, {})
+).toEqual(0);
 ```
 When writing a reducer, if `state` is not defined, return an object representing the initial state. In this counter example, we return `0` since our count will start from there. If the `action` being passed in isn't one the reducer recognizes, we just return the current `state`.
 
