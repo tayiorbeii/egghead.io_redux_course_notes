@@ -49,4 +49,4 @@ Now that we have composed this new `todoApp` reducer, we will use it to create t
 const store = createStore(todoApp);
 ```
 
-This pattern helps to scale Redux development, since different team members can work on different reducers that work with the same actions, without stepping on eachother's toes.
+This pattern helps to scale Redux development, since different team members can work on different reducers that work with the same actions, without stepping on each other's toes.
