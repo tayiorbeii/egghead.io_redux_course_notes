@@ -82,7 +82,7 @@ _Remember to have a `default` case where `state` is returned to avoid odd bugs i
 
 What we've just done is a common Redux practice called **reducer composition**. Different reducers specify how different parts of the state tree are updated in response to actions. Since reducers are normal JS functions, they can call other reducers to delegate & abstract away updates to the state. 
 
-Reducer composition can be applied many times. While there's a single top-level reducer managing the overall state of the app, it's encouraged to have reducers call eachother as needed to manage the state tree.
+Reducer composition can be applied many times. While there's a single top-level reducer managing the overall state of the app, it's encouraged to have reducers call each other as needed to manage the state tree.
 
 
 
