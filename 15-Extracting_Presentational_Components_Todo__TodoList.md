@@ -203,3 +203,6 @@ The `TodoApp` component renders a `TodoList` and passes it a function that can d
 The `TodoList` component renders the `Todo` component, and passes an `onClick` prop which calls `onTodoClick()`.
 
 The `Todo` component uses the `onClick` prop it receives and binds it to the list item's `onClick`. This way when it's called, the `onTodoClick()` is called, which in turn dispatches the action, which in turn updates the visibile todos, since the action updates the store.
+
+
+Resulting code can be seen [here](https://jsbin.com/qikayi/6/edit?js,output) on JS Bin.
