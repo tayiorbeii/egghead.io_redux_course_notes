@@ -3,7 +3,7 @@
 
 Now that we know how to use `combineReducers()` to save us some time, let's implement it from scratch in order to understand it deeper.
 
-Recall that the only argument to `combineReducers()` is a function declaration to map through our reducers, so we'll start by writing a function that accepts a parameter we'll call "reducers".
+Recall that the only argument to `combineReducers()` is the mapping between the state keys and their corresponding reduces, so we'll start by writing a function that accepts a parameter we'll call "reducers".
 
 Since `combineReducers()` returns a reducer function, it must have the signature of a reducer function (the state and an action).
 
