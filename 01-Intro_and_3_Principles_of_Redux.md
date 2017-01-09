@@ -68,6 +68,10 @@ Even in large applications, there is still just a single function that calculate
 This is the 3rd and final principle of Redux: to describe state mutations you have to write a function that takes the previous state of the app and the action being dispatched, then returns the next state of the app. This function is called the **Reducer**.
 
 
+<p align="center">
+<a href="https://github.com/donsalari/egghead.io_redux_course_notes/blob/master/02-Reducer_and_Store.md"><- Prev</a>
+<a href="https://github.com/donsalari/egghead.io_redux_course_notes/blob/master/02-Reducer_and_Store.md">Next -></a>
+</p>
 
 
 
