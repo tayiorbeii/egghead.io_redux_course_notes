@@ -123,3 +123,8 @@ document.addEventListener('click', () => {
     store.dispatch({ type : 'INCREMENT' })
 });
 ```
+
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/01-Intro_and_3_Principles_of_Redux.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/03-Implementing_Store_from_Scratch.md">Next -></a>
+</p>

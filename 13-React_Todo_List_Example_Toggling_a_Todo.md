@@ -36,9 +36,9 @@ In the UI, we want the todo item to appear as crossed out if it has been complet
 ```
 
 #### Recap of how toggling a todo item works
-Inside the click handler, we dispatch the `'TOGGLE_TODO'` action with a type of `'TOGGLE_TODO'` and the `id` of the todo being rendered. 
+Inside the click handler, we dispatch the `'TOGGLE_TODO'` action with a type of `'TOGGLE_TODO'` and the `id` of the todo being rendered.
 
-When an action is dispatched, the store will call the root reducer, which will call the `todos()` reducer with the array of todos & the action. 
+When an action is dispatched, the store will call the root reducer, which will call the `todos()` reducer with the array of todos & the action.
 
 Since this action is of type `'TOGGLE_TODO'`, the `todos()` reducer delegates the handling of every todo item to the `todo()` reducer by using the `map()` function to call it for every todo item in `state`:
 
@@ -55,7 +55,7 @@ const todos = (state = [], action) => {
 }
 ```
 
-The `todo()` reducer receives the todo item as `state`, and 'TOGGLE_TODO' as `action`. For every todo item whose `id` doesn't match the `id` in the action (remember the action's `id` was supplied by clicking the `<li>`), we just return the previous state (i.e. the `todo` object as it was). 
+The `todo()` reducer receives the todo item as `state`, and 'TOGGLE_TODO' as `action`. For every todo item whose `id` doesn't match the `id` in the action (remember the action's `id` was supplied by clicking the `<li>`), we just return the previous state (i.e. the `todo` object as it was).
 
 However, if the `id` of the todo matches the `id` of the action, we'll use ES6 notation to return a new object with all the properties of the original todo, but with the `completed` field toggled.
 ```JavaScript
@@ -91,3 +91,7 @@ render();
 ```
 Thus, our cycle is complete again.
 
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/12-React_Todo_List_Example_Adding_a_Todo.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/14-React_Todo_List_Example_Filtering_Todos.md">Next -></a>
+</p>

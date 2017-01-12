@@ -26,7 +26,7 @@ testAddCounter();
 console.log('All tests passed')
 ```
 
-As this code stands now, the test fails because we can't push 0 onto a frozen object. 
+As this code stands now, the test fails because we can't push 0 onto a frozen object.
 
 Instead, we need to use **concat**, because it doesn't modify the original object:
 ```Javascript
@@ -55,7 +55,7 @@ const testRemoveCounter = () => {
   ).toEqual(listAfter);
 };
 ```
-This works, but `splice` is also a mutating method. 
+This works, but `splice` is also a mutating method.
 We need to use `slice` instead:
 
 ```Javascript
@@ -73,7 +73,7 @@ const removeCounter = (list, index) => {
 };
 ```
 
-Now let's implement incrementing the counter. The function will take in the array and the index of the counter that we are incrementing. 
+Now let's implement incrementing the counter. The function will take in the array and the index of the counter that we are incrementing.
 ```Javascript
 const incrementCounter = (list, index) => {
   list[index]++;
@@ -110,4 +110,7 @@ const incrementCounter = (list, index) => {
 };
 ```
 
-
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/04-React_Counter_Example.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/06-Avoiding_Object_Mutations.md">Next -></a>
+</p>

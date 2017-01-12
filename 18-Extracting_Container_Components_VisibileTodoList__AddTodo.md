@@ -85,7 +85,7 @@ const AddTodo = () => {
 Now that we've refactored our components, it's become clear that none of the containers need props from `TodoApp`! We can also get rid of `TodoApp`'s `render()` function that rendered the current state of the store.
 
 We can get rid of the `render()` function because the container components inside of `TodoApp` are now set up to get state and update themselves as needed, therefore, we
-only need to render `TodoApp` once on initialization. 
+only need to render `TodoApp` once on initialization.
 
 ```JavaScript
 const TodoApp = () => (
@@ -105,3 +105,8 @@ ReactDOM.render(
 
 #### Recap of Data Flow
 [3:33 in the video](https://egghead.io/lessons/javascript-redux-extracting-container-components-visibletodolist-addtodo)
+
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/18-Extracting_Container_Components_VisibileTodoList__AddTodo.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/19-Passing_the_Store_Down_Explicitly_via_Props.md">Next -></a>
+</p>

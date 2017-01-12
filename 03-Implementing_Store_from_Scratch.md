@@ -41,3 +41,8 @@ const createStore = (reducer) => {
 ```
 
 That's pretty much it!
+
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/02-Reducer_and_Store.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/04-React_Counter_Example.md">Next -></a>
+</p>

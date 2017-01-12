@@ -139,3 +139,8 @@ class FilterLink extends Component {
 
 #### Recap
 [5:54 in the video has a walkthrough of what we've done.](https://egghead.io/lessons/javascript-redux-extracting-container-components-filterlink)
+
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/16-Extracting_Presentational_Components_AddTodo__Footer__FilterLink.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/18-Extracting_Container_Components_VisibileTodoList__AddTodo.md">Next -></a>
+</p>

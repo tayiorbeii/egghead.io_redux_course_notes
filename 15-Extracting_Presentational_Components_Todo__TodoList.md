@@ -1,7 +1,7 @@
 # 20. Extracting Presentational Components (Todo, Todolist)
 [Video Link](https://egghead.io/lessons/javascript-redux-extracting-presentational-components-todo-todolist)
 
-We have a working example of our app now, but our `TodoApp` component has the input, button, list of todos, and filter links all inside of it. 
+We have a working example of our app now, but our `TodoApp` component has the input, button, list of todos, and filter links all inside of it.
 
 We are going to refactor this single component into separate pieces so that they can be tested and worked on individually from one another.
 
@@ -143,12 +143,12 @@ const TodoList = ({
 ```
 
 #### Container Components (`TodoApp`)
-While presentational components just display data, we need a way to actually pass data from the store. 
+While presentational components just display data, we need a way to actually pass data from the store.
 This is where **container components** come in-- they can specify behavior and pass data.
 
 In our example, `TodoApp` is our container component.
 
-Now that we've created `TodoList` and `Todo` presentational components, we can put them into our `TodoApp` container component. 
+Now that we've created `TodoList` and `Todo` presentational components, we can put them into our `TodoApp` container component.
 
 Our `TodoApp` will render our `TodoList` with `visibleTodos` as the `todos`, along with a callback that says when `onTodoClick` is called with a todo `id`, we should dispatch an action on the store of type `'TOGGLE_TODO'` along with the `id` of the todo.
 
@@ -180,7 +180,7 @@ class TodoApp extends Component {
         }}>
           Add Todo
         </button>
-        <TodoList 
+        <TodoList
           todos={visibleTodos}
           onTodoClick={id =>
             store.dispatch({
@@ -203,3 +203,8 @@ The `TodoApp` component renders a `TodoList` and passes it a function that can d
 The `TodoList` component renders the `Todo` component, and passes an `onClick` prop which calls `onTodoClick()`.
 
 The `Todo` component uses the `onClick` prop it receives and binds it to the list item's `onClick`. This way when it's called, the `onTodoClick()` is called, which in turn dispatches the action, which in turn updates the visibile todos, since the action updates the store.
+
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/14-React_Todo_List_Example_Filtering_Todos.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/16-Extracting_Presentational_Components_AddTodo__Footer__FilterLink.md">Next -></a>
+</p>

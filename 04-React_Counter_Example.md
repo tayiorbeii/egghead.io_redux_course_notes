@@ -31,7 +31,7 @@ render();
 ```
 
 We can add "Increment" and "Decrement" buttons to the `Counter` without re-introducing the Redux dependency,
-so the onIncrement/onDecrement callbacks may instead be passed as props to the button(s). 
+so the onIncrement/onDecrement callbacks may instead be passed as props to the button(s).
 
 ```Javascript
 const Counter = ({
@@ -76,3 +76,8 @@ When the `Counter` is rendered, we specify that its value should be taken from t
 The reducer specifies how the next state is calculated based on the current state and the action being dispatched.
 
 Finally, we subscribe to the Redux store so our `render()` function runs any time the state changes so our `Counter` gets the current state.
+
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/03-Implementing_Store_from_Scratch.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/05-Avoiding_Array_Mutations.md">Next -></a>
+</p>

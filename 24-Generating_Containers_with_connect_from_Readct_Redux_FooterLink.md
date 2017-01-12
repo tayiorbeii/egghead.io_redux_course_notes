@@ -7,7 +7,7 @@ Recall that our `FilterLink` component renders a `Link` with an `active` prop an
 
 #### `mapStateToProps`
 
-We'll start by writing our `mapStateToProps` function which we will call `mapStateToLinkProps` because everything is in a single file, remember? It will accept the state of the Redux store, and return the props that should be passed to the `Link` component. 
+We'll start by writing our `mapStateToProps` function which we will call `mapStateToLinkProps` because everything is in a single file, remember? It will accept the state of the Redux store, and return the props that should be passed to the `Link` component.
 
 The only prop in `Link` is `active`, which determines the styling based on the `visibilityFilter.` We remove the definition from `Link`'s `active` prop, and move it into `mapStateToLinkProps`.
 
@@ -42,7 +42,7 @@ const mapStateToLinkProps = (
 #### `mapDispatchToProps`
 Again, we will rename this function to `mapDispatchToLinkProps` to avoid name collisions.
 
-Initially we know our first argument is the `dispatch()` function. To see what other arguments we need, we will to look at the container component to see what props depend on the `dispatch` function. 
+Initially we know our first argument is the `dispatch()` function. To see what other arguments we need, we will to look at the container component to see what props depend on the `dispatch` function.
 
 In this case, we only have the `onClick()` where we dispatch the action of type `'SET_VISIBILITY_FILTER'` along with the `filter` type. Since there is another reference to `props`, we will add `ownProps` as our second argument to `mapDispatchToLinkProps`.
 
@@ -76,4 +76,7 @@ Now that we've used `react-redux`'s `connect()`, we can remove our old `FilterLi
 
 [2:32 has the recap.](https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-footerlink)
 
-
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/23-Generating_Containers_with_connect_from_React_Redux_AddTodo.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/25-Extracting_Action_Creators.md">Next -></a>
+</p>

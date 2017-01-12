@@ -24,7 +24,7 @@ const todo = (state, action) => {
         ...state,
           completed: !state.completed
       };
-    default: 
+    default:
       return state;
   }
 };
@@ -104,7 +104,7 @@ class TodoApp extends Component {
 const render = () => {
   ReactDOM.render(
     // Render the TodoApp Component to the <div> with id 'root'
-    <TodoApp 
+    <TodoApp
       todos={store.getState().todos}
     />,
     document.getElementById('root')
@@ -132,7 +132,7 @@ HTML:
 ### Now that all that code is written...
 With the code above, every time you click the "Add Todo" button, a new Todo item with the text "Test" is added to the bulleted list.
 
-Let's add an `<input>` to our TodoApp component's return. We'll use React's callback `ref()` API. 
+Let's add an `<input>` to our TodoApp component's return. We'll use React's callback `ref()` API.
 `ref()` is a function that gets the node corresponding to the ref that we'll save with the name `this.input`.
 
 From there, we can reference the value in `this.input` inside our button click handler, then reset the value after the `'ADD_TODO'` action has been dispatched.
@@ -185,11 +185,11 @@ Any change to state is caused by a `store.dispatch()` call somewhere in the comp
 
 When an action is dispatched, the `store` calls the reducer it was created with with the current state & the action being dispatched. In the case of this example, this is the `todoApp` reducer that we obtained by `const todoApp = combineReducers({todos, visibilityFilter})`.
 
-Continuing with our example, the `'ADD_TODO'` action type is matched in the switch statement inside the `todos()` reducer, so the child `todo()` reducer is called. The `todo()` child reducer is passed `undefined` (because there is no `state` for a new todo) and the action `'ADD_TODO'` 
+Continuing with our example, the `'ADD_TODO'` action type is matched in the switch statement inside the `todos()` reducer, so the child `todo()` reducer is called. The `todo()` child reducer is passed `undefined` (because there is no `state` for a new todo) and the action `'ADD_TODO'`
 
 Inside of the `todo()` child reducer, we have a similar switch statement. Since `'ADD_TODO'` is matched, the reducer returns the initial state of the todo item (the `id` from `nextTodoId++` and `text` from the input box inside the `TodoApp` component, along with `completed: false`).
 
-The `todos()` reducer that just called the child `todo()` reducer will then return a new array built from the existing items along with the newly created item added to the end (remember, this array is built using ES6's `...` spread operator). 
+The `todos()` reducer that just called the child `todo()` reducer will then return a new array built from the existing items along with the newly created item added to the end (remember, this array is built using ES6's `...` spread operator).
 
 Now our combined reducer `todoApp` will use this new `todos` array as the new value for the `todos` field in the global state object. So, it's going to return a new `state` object where the `todos` field corresponds to the array with the newly added todo item.
 
@@ -198,3 +198,9 @@ The `todoApp` reducer is the **root reducer** in this application. It is the one
 The `render()` function is subscribed to the store's changes, so it is called again and gets the fresh state with `store.getState()` and passes the updated `todos` as a prop to the `TodoApp` component.
 
 Now the cycle can be repeated.
+
+
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/11-Implementing_combineReducers_from_Scratch.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/13-React_Todo_List_Example_Toggling_a_Todo.md">Next -></a>
+</p>

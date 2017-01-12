@@ -57,9 +57,9 @@ const toggleTodo = (todo) => {
 ```
 _Note how the argument order to `Object.assign()` corresponds to the JavaScript assignment operator order._
 
-The left argument is the one whose properties are going to be assigned, so we pass in an empty object (`{}`) because it will be mutated (remember, we don't want to mutate any existing data). 
+The left argument is the one whose properties are going to be assigned, so we pass in an empty object (`{}`) because it will be mutated (remember, we don't want to mutate any existing data).
 
-Every further argument to `Object.assign()` is considered a source object whose properties will be copied to the target (in this case, the target is our blank object provided as the first argument). 
+Every further argument to `Object.assign()` is considered a source object whose properties will be copied to the target (in this case, the target is our blank object provided as the first argument).
 
 If there are multiple occurrences of the same property/properties, the last occurrence "wins". In this case, the `{ completed: !todo.completed }` we specify in the third overwrites the `completed` contained within the `todo` in the second argument.
 
@@ -75,3 +75,8 @@ const toggleTodo = (todo) => {
 };
 ```
 
+
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/05-Avoiding_Array_Mutations.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/07-Writing_a_Todo_List_Reducer.md">Next -></a>
+</p>

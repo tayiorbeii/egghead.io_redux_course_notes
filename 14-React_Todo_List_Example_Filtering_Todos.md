@@ -71,7 +71,7 @@ Now we've got some links to select the filter, but they don't have a visible eff
 
 We need to create a `getVisibleTodos()` function that will help us filter the todos according to the filter value.
 
-`getVisibleTodos()` will take two arguments: The list of `todos` and the `filter`. Inside will be a switch statement that operates based on the current filter value. 
+`getVisibleTodos()` will take two arguments: The list of `todos` and the `filter`. Inside will be a switch statement that operates based on the current filter value.
 
 
 ```JavaScript
@@ -106,7 +106,7 @@ Inside the `render()` function of the `TodoApp` component, we get the visible to
 We will now use `visibleTodos` instead of `this.props.todos` when rendering our list.
 ```JavaScript
 .
-. 
+.
 .
 class TodoApp extends Component {
   render() {
@@ -118,7 +118,7 @@ class TodoApp extends Component {
     . // Input and Button stuff
     .
     <ul>
-      {visibleTodos.map(todo => 
+      {visibleTodos.map(todo =>
         .
         . // `<li>` click handling and item rendering
         .
@@ -151,7 +151,7 @@ Now when we add some todo items and then "complete" them, we can show the list a
 
 However, it would be nice to differentiate between our filter links by showing which one we have selected.
 
-We'll start by using ES6 destructuring inside of the `TodoApp` component to extract `todos` and `visibilityFilter` from the props. Now we can access them directly instead of having to type "`this.props.`" every time. 
+We'll start by using ES6 destructuring inside of the `TodoApp` component to extract `todos` and `visibilityFilter` from the props. Now we can access them directly instead of having to type "`this.props.`" every time.
 
 ```JavaScript
 class TodoApp extends Component {
@@ -169,7 +169,7 @@ class TodoApp extends Component {
      . // input, button, and list stuff
      .
 ```
-Now we'll include the current `visibilityFilter` with our `FilterLink`s so it can know which is the current one and apply different styles accordingly. 
+Now we'll include the current `visibilityFilter` with our `FilterLink`s so it can know which is the current one and apply different styles accordingly.
 
 ```JavaScript
 <p>
@@ -218,9 +218,9 @@ const FilterLink = ({
 #### To review how changing a visibility filter works...
 Clicking one of the filter types dispatches an action of type `'SET_VISIBILITY_FILTER'` and passes `filter` which is a prop to the `FilterLink` component (every one of the 3 links will have a different `filter` prop).
 
-The `store.dispatch()` function calls our `todoApp()` root reducer with the state and the action, which in turn calls the `visibilityFilter()` reducer with the part of the state and the action. 
+The `store.dispatch()` function calls our `todoApp()` root reducer with the state and the action, which in turn calls the `visibilityFilter()` reducer with the part of the state and the action.
 
-Note that when the action is of type `'SET_VISIBILITY_FILTER'`, it doesn't care about the previous state. It just returns `action.filter` as the next state of the `visibilityFilter()` reducer. The root reducer will use this new field as part of its new `state` object. 
+Note that when the action is of type `'SET_VISIBILITY_FILTER'`, it doesn't care about the previous state. It just returns `action.filter` as the next state of the `visibilityFilter()` reducer. The root reducer will use this new field as part of its new `state` object.
 
 Because the `render()` function is subscribed to changes in `store`, it's going to get the new `state` object and pass all its keys as props to the `TodoApp` component.
 
@@ -232,4 +232,7 @@ The `visibilityFilter` field is also used by the `FilterLinks` as the `currentFi
 
 ...thus the cycle is complete.
 
-
+<p align="center">
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/13-React_Todo_List_Example_Toggling_a_Todo.md"><- Prev</a>
+<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/15-Extracting_Presentational_Components_Todo__TodoList.md">Next -></a>
+</p>
