@@ -141,5 +141,5 @@ Keeping all of our action creators together in one place helps to inform others 
 Whether you use action creators or not, the data flow is the same.
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/24-Generating_Containers_with_connect_from_Readct_Redux_FooterLink.md"><- Prev</a>
+<a href="./24-Generating_Containers_with_connect_from_Readct_Redux_FooterLink.md"><- Prev</a>
 </p>

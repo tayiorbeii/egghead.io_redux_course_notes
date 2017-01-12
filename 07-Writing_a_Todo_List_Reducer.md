@@ -133,6 +133,6 @@ Note that inside our `'TOGGLE_TODO'` reducer that we return the existing todo it
 
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/06-Avoiding_Object_Mutations.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/08-Reducer_Composition_with_Arrays.md">Next -></a>
+<a href="./06-Avoiding_Object_Mutations.md"><- Prev</a>
+<a href="./08-Reducer_Composition_with_Arrays.md">Next -></a>
 </p>

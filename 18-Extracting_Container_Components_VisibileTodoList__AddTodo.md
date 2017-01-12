@@ -107,6 +107,6 @@ ReactDOM.render(
 [3:33 in the video](https://egghead.io/lessons/javascript-redux-extracting-container-components-visibletodolist-addtodo)
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/18-Extracting_Container_Components_VisibileTodoList__AddTodo.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/19-Passing_the_Store_Down_Explicitly_via_Props.md">Next -></a>
+<a href="./18-Extracting_Container_Components_VisibileTodoList__AddTodo.md"><- Prev</a>
+<a href="./19-Passing_the_Store_Down_Explicitly_via_Props.md">Next -></a>
 </p>

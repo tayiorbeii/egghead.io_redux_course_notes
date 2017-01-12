@@ -168,6 +168,6 @@ Context is a powerful feature, but in a way it contradicts the React philosophy 
 Finally, it is important to note that the `context` API is not stable in React. It has changed before, and it is likely to change again, so it is probably best to not rely on it too much.
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/19-Passing_the_Store_Down_Explicitly_via_Props.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/21-Passing_the_Store_Down_with_Provider_from_React_Redux.md">Next -></a>
+<a href="./19-Passing_the_Store_Down_Explicitly_via_Props.md"><- Prev</a>
+<a href="./21-Passing_the_Store_Down_with_Provider_from_React_Redux.md">Next -></a>
 </p>

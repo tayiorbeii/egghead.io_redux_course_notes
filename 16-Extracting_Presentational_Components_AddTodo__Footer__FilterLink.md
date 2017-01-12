@@ -280,6 +280,6 @@ Separation of presentational components isn't required in Redux, but it's a good
 One of the downsides to having separate presentational components is that we have to move around a lot of props, including the callbacks. However, we can easily solve this problem by introducing many intermediate container components, which we will start on in the next section.
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/15-Extracting_Presentational_Components_Todo__TodoList.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/17-Extracting_Container_Components_FilterLink.md">Next -></a>
+<a href="./15-Extracting_Presentational_Components_Todo__TodoList.md"><- Prev</a>
+<a href="./17-Extracting_Container_Components_FilterLink.md">Next -></a>
 </p>

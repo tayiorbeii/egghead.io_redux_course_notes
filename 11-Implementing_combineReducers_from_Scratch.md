@@ -51,6 +51,6 @@ It's important to understand functional programming-- functions can take other f
 
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/10-Reducer_Composition_with_combineReducers.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/12-React_Todo_List_Example_Adding_a_Todo.md">Next -></a>
+<a href="./10-Reducer_Composition_with_combineReducers.md"><- Prev</a>
+<a href="./12-React_Todo_List_Example_Adding_a_Todo.md">Next -></a>
 </p>

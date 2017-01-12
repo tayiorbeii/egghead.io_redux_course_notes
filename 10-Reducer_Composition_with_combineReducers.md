@@ -45,6 +45,6 @@ const todoApp = combineReducers({
 
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/09-Reducer_Composition_with_Objects.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/11-Implementing_combineReducers_from_Scratch.md">Next -></a>
+<a href="./09-Reducer_Composition_with_Objects.md"><- Prev</a>
+<a href="./11-Implementing_combineReducers_from_Scratch.md">Next -></a>
 </p>

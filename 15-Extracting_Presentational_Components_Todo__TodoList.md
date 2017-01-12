@@ -205,6 +205,6 @@ The `TodoList` component renders the `Todo` component, and passes an `onClick` p
 The `Todo` component uses the `onClick` prop it receives and binds it to the list item's `onClick`. This way when it's called, the `onTodoClick()` is called, which in turn dispatches the action, which in turn updates the visibile todos, since the action updates the store.
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/14-React_Todo_List_Example_Filtering_Todos.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/16-Extracting_Presentational_Components_AddTodo__Footer__FilterLink.md">Next -></a>
+<a href="./14-React_Todo_List_Example_Filtering_Todos.md"><- Prev</a>
+<a href="./16-Extracting_Presentational_Components_AddTodo__Footer__FilterLink.md">Next -></a>
 </p>

@@ -77,6 +77,6 @@ Now that we've used `react-redux`'s `connect()`, we can remove our old `FilterLi
 [2:32 has the recap.](https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-footerlink)
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/23-Generating_Containers_with_connect_from_React_Redux_AddTodo.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/25-Extracting_Action_Creators.md">Next -></a>
+<a href="./23-Generating_Containers_with_connect_from_React_Redux_AddTodo.md"><- Prev</a>
+<a href="./25-Extracting_Action_Creators.md">Next -></a>
 </p>

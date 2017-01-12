@@ -69,5 +69,5 @@ This is the 3rd and final principle of Redux: to describe state mutations you ha
 
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/02-Reducer_and_Store.md">Next -></a>
+<a href="./02-Reducer_and_Store.md">Next -></a>
 </p>

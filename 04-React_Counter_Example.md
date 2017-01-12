@@ -78,6 +78,6 @@ The reducer specifies how the next state is calculated based on the current stat
 Finally, we subscribe to the Redux store so our `render()` function runs any time the state changes so our `Counter` gets the current state.
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/03-Implementing_Store_from_Scratch.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/05-Avoiding_Array_Mutations.md">Next -></a>
+<a href="./03-Implementing_Store_from_Scratch.md"><- Prev</a>
+<a href="./05-Avoiding_Array_Mutations.md">Next -></a>
 </p>

@@ -86,6 +86,6 @@ Reducer composition can be applied many times. While there's a single top-level 
 
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/07-Writing_a_Todo_List_Reducer.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/09-Reducer_Composition_with_Objects.md">Next -></a>
+<a href="./07-Writing_a_Todo_List_Reducer.md"><- Prev</a>
+<a href="./09-Reducer_Composition_with_Objects.md">Next -></a>
 </p>

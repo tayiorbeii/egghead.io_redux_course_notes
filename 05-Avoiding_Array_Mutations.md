@@ -111,6 +111,6 @@ const incrementCounter = (list, index) => {
 ```
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/04-React_Counter_Example.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/06-Avoiding_Object_Mutations.md">Next -></a>
+<a href="./04-React_Counter_Example.md"><- Prev</a>
+<a href="./06-Avoiding_Object_Mutations.md">Next -></a>
 </p>

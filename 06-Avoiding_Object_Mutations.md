@@ -77,6 +77,6 @@ const toggleTodo = (todo) => {
 
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/05-Avoiding_Array_Mutations.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/07-Writing_a_Todo_List_Reducer.md">Next -></a>
+<a href="./05-Avoiding_Array_Mutations.md"><- Prev</a>
+<a href="./07-Writing_a_Todo_List_Reducer.md">Next -></a>
 </p>

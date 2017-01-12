@@ -233,6 +233,6 @@ The `visibilityFilter` field is also used by the `FilterLinks` as the `currentFi
 ...thus the cycle is complete.
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/13-React_Todo_List_Example_Toggling_a_Todo.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/15-Extracting_Presentational_Components_Todo__TodoList.md">Next -></a>
+<a href="./13-React_Todo_List_Example_Toggling_a_Todo.md"><- Prev</a>
+<a href="./15-Extracting_Presentational_Components_Todo__TodoList.md">Next -></a>
 </p>

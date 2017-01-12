@@ -141,6 +141,6 @@ Note that this change did not change the behavior of the data flow of the applic
 Soon we will see how to pass `store` to the container components implicitly, but for now, this is where we're at.
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/18-Extracting_Container_Components_VisibileTodoList__AddTodo.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/20-Passing_the_Store_Down_Implicitly_via_Context.md">Next -></a>
+<a href="./18-Extracting_Container_Components_VisibileTodoList__AddTodo.md"><- Prev</a>
+<a href="./20-Passing_the_Store_Down_Implicitly_via_Context.md">Next -></a>
 </p>

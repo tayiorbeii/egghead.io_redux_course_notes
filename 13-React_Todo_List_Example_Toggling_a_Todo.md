@@ -92,6 +92,6 @@ render();
 Thus, our cycle is complete again.
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/12-React_Todo_List_Example_Adding_a_Todo.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/14-React_Todo_List_Example_Filtering_Todos.md">Next -></a>
+<a href="./12-React_Todo_List_Example_Adding_a_Todo.md"><- Prev</a>
+<a href="./14-React_Todo_List_Example_Filtering_Todos.md">Next -></a>
 </p>

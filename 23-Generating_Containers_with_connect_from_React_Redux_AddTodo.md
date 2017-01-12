@@ -80,6 +80,6 @@ Now the default behavior to not subscribe to the store, and inject `dispatch` as
 [3:43 in the video has the recap.](https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-addtodo)
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/22-Generating_Containers_with_connect_from_React_Redux_VisibleTodoList.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/24-Generating_Containers_with_connect_from_Readct_Redux_FooterLink.md">Next -></a>
+<a href="./22-Generating_Containers_with_connect_from_React_Redux_VisibleTodoList.md"><- Prev</a>
+<a href="./24-Generating_Containers_with_connect_from_Readct_Redux_FooterLink.md">Next -></a>
 </p>

@@ -201,6 +201,6 @@ Now the cycle can be repeated.
 
 
 <p align="center">
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/11-Implementing_combineReducers_from_Scratch.md"><- Prev</a>
-<a href="https://github.com/tayiorbeii/egghead.io_redux_course_notes/blob/master/13-React_Todo_List_Example_Toggling_a_Todo.md">Next -></a>
+<a href="./11-Implementing_combineReducers_from_Scratch.md"><- Prev</a>
+<a href="./13-React_Todo_List_Example_Toggling_a_Todo.md">Next -></a>
 </p>
