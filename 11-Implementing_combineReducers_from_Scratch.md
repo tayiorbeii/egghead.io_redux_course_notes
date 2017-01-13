@@ -48,3 +48,9 @@ const todoApp = combineReducers({
 It's okay that we are mutating the empty object representing `nextState`, because it was created within the `combineReducers()` function and not passed in from the outside. Thus, our function remains pure.
 
 It's important to understand functional programming-- functions can take other functions as arguments, and return other functions. Knowing this will increase productivity with Redux in the long term.
+
+
+<p align="center">
+<a href="./10-Reducer_Composition_with_combineReducers.md"><- Prev</a>
+<a href="./12-React_Todo_List_Example_Adding_a_Todo.md">Next -></a>
+</p>

@@ -166,3 +166,8 @@ Now we are implictly passing `store` down via context instead of having to expli
 Context is a powerful feature, but in a way it contradicts the React philosophy of having an explicit data flow. The context essentially allows global variables across the component tree. Global variables are usually a bad idea, and you shouldn't use the context feature in this way. You should only use context if you're using it for dependency injection (like in our case where we need to make a single object available to all components).
 
 Finally, it is important to note that the `context` API is not stable in React. It has changed before, and it is likely to change again, so it is probably best to not rely on it too much.
+
+<p align="center">
+<a href="./19-Passing_the_Store_Down_Explicitly_via_Props.md"><- Prev</a>
+<a href="./21-Passing_the_Store_Down_with_Provider_from_React_Redux.md">Next -></a>
+</p>

@@ -35,7 +35,7 @@ class TodoApp extends Component {
         }}>
           Add Todo
         </button>
-        <TodoList 
+        <TodoList
           todos={visibleTodos}
           onTodoClick={id =>
             store.dispatch({
@@ -75,7 +75,7 @@ class TodoApp extends Component {
 ```
 
 #### Extracting the Input and the Button into `AddTodo`
-We will combine the input and the button into one new component called `AddTodo`. 
+We will combine the input and the button into one new component called `AddTodo`.
 
 Functional components don't have instances, so instead of using `this`, we will use a variable called `input` that we will close over so we can write to it inside of the function.
 
@@ -103,7 +103,7 @@ const AddTodo = ({
 };
 ```
 
-Now we need to update the `TodoApp` container component by replacing the `<input>` and `<button>` entries with 
+Now we need to update the `TodoApp` container component by replacing the `<input>` and `<button>` entries with
 our new `AddTodo` component.
 
 We will also specify our `onAddClick` function to dispatch an action of type `'ADD_TODO'` along with the corresponding `text` and next `id`.
@@ -129,7 +129,7 @@ return (
 ```
 
 #### Extracting the `FilterLink` Footer Elements
-Now we will create a new functional component called `Footer`. Since each `FilterLink` needs to know the `visibilityFilter`, we will make that a prop. 
+Now we will create a new functional component called `Footer`. Since each `FilterLink` needs to know the `visibilityFilter`, we will make that a prop.
 
 We want the `Filter` and `FilterLink` to be presentational components, but in its current implementation each of the `FilterLink`s contain a `store.dispatch()` call. This call will be replaced by an `onClick` call that will take a single parameter with the filter. We also add `onClick` to `FilterLink`'s props.
 
@@ -202,7 +202,7 @@ return (
   <div>
     // `<AddTodo>` component
     // `<TodoList>` component
-    <Footer 
+    <Footer
       visibilityFilter={visibilityFilter}
       onFilterClick={filter =>
         store.dispatch({
@@ -218,13 +218,13 @@ return (
 ```
 
 #### Changing `TodoApp` into a function
-It is possible to change `TodoApp` from a class into a function. 
+It is possible to change `TodoApp` from a class into a function.
 
 This allows us to eliminate the destructuring of `todos` and `visibilityFilter` from `this.props` inside the `render` function. Instead, we can do this inside the argument to the `TodoApp` function.
 
 We can also do away with the `render()` declaration.
 
-Since the `visibleTodos` are only used in a single place, we can move its declaration into the `TodoList` `todos` prop declaration. 
+Since the `visibleTodos` are only used in a single place, we can move its declaration into the `TodoList` `todos` prop declaration.
 
 ```JavaScript
 const TodoApp = ({
@@ -256,7 +256,7 @@ const TodoApp = ({
           })
         }
       />
-      <Footer 
+      <Footer
         visibilityFilter={visibilityFilter}
         onFilterClick={filter =>
           store.dispatch({
@@ -279,6 +279,7 @@ Separation of presentational components isn't required in Redux, but it's a good
 
 One of the downsides to having separate presentational components is that we have to move around a lot of props, including the callbacks. However, we can easily solve this problem by introducing many intermediate container components, which we will start on in the next section.
 
-
-
-
+<p align="center">
+<a href="./15-Extracting_Presentational_Components_Todo__TodoList.md"><- Prev</a>
+<a href="./17-Extracting_Container_Components_FilterLink.md">Next -></a>
+</p>

@@ -72,3 +72,8 @@ const VisibleTodoList = connect(
 The `connect()` function will generate the component just like the one we wrote by hand, so we don't have to write the code to subscribe to the store or to specify the context types manually.
 
 [3:41 in the video has the recap of what we've just done.](https://egghead.io/lessons/javascript-redux-generating-containers-with-connect-from-react-redux-visibletodolist)
+
+<p align="center">
+<a href="./21-Passing_the_Store_Down_with_Provider_from_React_Redux.md"><- Prev</a>
+<a href="./23-Generating_Containers_with_connect_from_React_Redux_AddTodo.md">Next -></a>
+</p>

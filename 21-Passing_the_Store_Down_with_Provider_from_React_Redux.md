@@ -14,11 +14,9 @@ const { Provider } = ReactRedux;
 import { Provider } from 'react-redux';
 ```
 
-Just like the `Provider` we wrote before, the `Provider` that comes with `react-redux` exposes the `store` as a prop on the context. 
+Just like the `Provider` we wrote before, the `Provider` that comes with `react-redux` exposes the `store` as a prop on the context.
 
-
-
-
-
-
-
+<p align="center">
+<a href="./20-Passing_the_Store_Down_Implicitly_via_Context.md"><- Prev</a>
+<a href="./22-Generating_Containers_with_connect_from_React_Redux_VisibleTodoList.md">Next -></a>
+</p>

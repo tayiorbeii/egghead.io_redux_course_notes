@@ -130,3 +130,9 @@ console.log('All tests passed.');
 ```
 
 Note that inside our `'TOGGLE_TODO'` reducer that we return the existing todo item if the `id` doesn't match the `id` of the todo we are toggling. If the `id` does match, we use the spread operator to return a new object with all the properties of the existing `todo` object, along with an inverted `completed` value.
+
+
+<p align="center">
+<a href="./06-Avoiding_Object_Mutations.md"><- Prev</a>
+<a href="./08-Reducer_Composition_with_Arrays.md">Next -></a>
+</p>

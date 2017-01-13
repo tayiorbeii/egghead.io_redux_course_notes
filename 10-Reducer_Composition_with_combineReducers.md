@@ -7,7 +7,7 @@ So now instead of this:
 ```JavaScript
 const todoApp = (state = {}, action) => {
   return {
-     todos: todos( 
+     todos: todos(
       state.todos,
       action
     ),
@@ -30,9 +30,9 @@ const todoApp = combineReducers({
 });
 ```
 
-This code generates our top level reducer. The only argument to `combineReducers()` is an object that specifies the mapping between the state field names and the reducers that manage them. 
+This code generates our top level reducer. The only argument to `combineReducers()` is an object that specifies the mapping between the state field names and the reducers that manage them.
 
-The return value of `combineReducers()` is a reducer function that is pretty much equivalent to what we wrote earlier. 
+The return value of `combineReducers()` is a reducer function that is pretty much equivalent to what we wrote earlier.
 
 **By convention, the state keys should be named after the reducers that manage them.** Because of this, we can use ES6 object literal shorthand notation to accomplish the same thing like this:
 
@@ -44,4 +44,7 @@ const todoApp = combineReducers({
 ```
 
 
-
+<p align="center">
+<a href="./09-Reducer_Composition_with_Objects.md"><- Prev</a>
+<a href="./11-Implementing_combineReducers_from_Scratch.md">Next -></a>
+</p>

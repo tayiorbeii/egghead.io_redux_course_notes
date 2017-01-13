@@ -139,3 +139,8 @@ Now all of our components are receiving `state` via their props instead of relyi
 Note that this change did not change the behavior of the data flow of the application. The containers subscribe to `store` and update like they did before. What changed is _how_ they get the store.
 
 Soon we will see how to pass `store` to the container components implicitly, but for now, this is where we're at.
+
+<p align="center">
+<a href="./18-Extracting_Container_Components_VisibileTodoList__AddTodo.md"><- Prev</a>
+<a href="./20-Passing_the_Store_Down_Implicitly_via_Context.md">Next -></a>
+</p>
