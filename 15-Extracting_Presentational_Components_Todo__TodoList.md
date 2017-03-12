@@ -5,7 +5,7 @@ We have a working example of our app now, but our `TodoApp` component has the in
 
 We are going to refactor this single component into separate pieces so that they can be tested and worked on individually from one another.
 
-##### Current `TodoApp` Component Code:
+##### Current `TodoApp` Component Code (see on [JS Bin](https://jsbin.com/qikayi/3/edit?html,js,output)):
 
 ```JavaScript
 class TodoApp extends Component {
