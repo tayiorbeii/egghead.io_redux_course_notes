@@ -79,7 +79,7 @@ We will combine the input and the button into one new component called `AddTodo`
 
 Functional components don't have instances, so instead of using `this`, we will use a variable called `input` that we will close over so we can write to it inside of the function.
 
-Since we want `AddTodo` to be a presentational component, we will have the button call an `onAddClick()` function with `input`'s value as its parameter. We also make `onAddClick` a prop so that the component that uses `AddTodo` can specify what happens with the "Add Todo" button is clicked.
+Since we want `AddTodo` to be a presentational component, we will have the button call an `onAddClick()` function with `input`'s value as its parameter. We also make `onAddClick` a prop so that the component that uses `AddTodo` can specify what happens when the "Add Todo" button is clicked.
 
 ```JavaScript
 const AddTodo = ({
