@@ -59,7 +59,7 @@ This distinction is important to understand, since Redux requires that certain f
 
 React introduced the idea that the UI layer is most predictable when it is described as a pure function of the application's state.
 
-Redux compliments this approach by requiring that state mutations in your app need to be described by a pure function that takes the previous state and the action being dispatched, and returns the next state of your application.
+Redux complements this approach by requiring that state mutations in your app need to be described by a pure function that takes the previous state and the action being dispatched, and returns the next state of your application.
 
 **Inside a Redux application there is one particular function that takes the previous state and the action being dispatched, and returns the next state of the whole application**. It is important that the function is pure (i.e. the state being given to it isn't modified) because it has to return the new object representing the application's new state.
 
