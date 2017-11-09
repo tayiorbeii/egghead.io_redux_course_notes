@@ -74,7 +74,7 @@ const todo = (state, action) => {
 };
 ```
 
-The updated todo item will be included in the `todos` field under the new application `state`, and because we subscribe to the `render()` function, it's going to get the next state of the application via `store.getState()` and pass the new version of the `todos` array to the `TodoApp` component to be mapped and rendered as a bulleted list (where completed items have a line through them).
+The updated todo item will be included in the `todos` field under the new application `state`, and because the `render()` function subscribes to the store, it's going to get the next state of the application via `store.getState()` and pass the new version of the `todos` array to the `TodoApp` component to be mapped and rendered as a bulleted list (where completed items have a line through them).
 
 ```JavaScript
 const render = () => {
