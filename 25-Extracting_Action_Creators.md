@@ -38,7 +38,7 @@ In order to allow other components to dispatch the `'ADD_TODO'` action, it would
 
 Our first action creator will be `addTodo`. This will be a function that takes the `text` of the todo and constructs an action object representing the `'ADD_TODO'` action.
 
-Replace the code inside the `dispatch()` call inside of the `AddTodo` component will a call to `addTodo()`.
+Replace the code inside the `dispatch()` call inside of the `AddTodo` component with a call to `addTodo()`.
 ```JavaScript
 // inside `AddTodo` component
 <button onClick={() => {
