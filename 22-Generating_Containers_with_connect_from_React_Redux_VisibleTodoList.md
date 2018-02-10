@@ -46,7 +46,7 @@ We now have two functions:
 A function `mapStateToProps` that maps the Redux store's state to the props of the `TodoList` component that are related to the data from the Redux store. These props
 will be updated any time the state changes
 
-We also created a function `mapDispatchToProps` that maps the store's `dispatch()` method of and returns the props that use the dispatch method to dispatch actions. So it returns the callback props needed by the presentational component. It specifies the behavior of which callback prop dispatches which action.
+We also created a function `mapDispatchToProps` that maps the store's `dispatch()` method and returns the props that use the dispatch method to dispatch actions. So it returns the callback props needed by the presentational component. It specifies the behavior of which callback prop dispatches which action.
 
 ##### The `connect()` function
 Together, these two new functions describe a container component so well that instead of writing it we can generate it by using the `connect()` function provided by `react-redux`.
