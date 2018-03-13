@@ -113,7 +113,7 @@ class FilterLink extends Component {
 #### Problems with `FilterLink`
 There is a small problem with this implementation of `FilterLink`. Inside the `render()` method it reads the current `state` of the Redux store, however _it does not subscribe_ to the store. So if the parent component doesn't update when the store is updated, the correct value won't be rendered.
 
-Also, we currently re-render the entire application when the state changes, which isn't very efficient. In the future, we will move subscription to the React lifecycle methods of the container components.
+Also, we currently re-render the entire application when the state changes, which isn't very efficient. In the future, we will move subscription to the store to the lifecycle methods of the container components.
 
 React provides a special `forceUpdate()` method on the Component instances to force them to re-render. We can use it in combination with the `store.subscribe()` method so that any time the store changes we force the container component to update.
 
