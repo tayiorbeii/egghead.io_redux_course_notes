@@ -5,10 +5,28 @@ The first principle of Redux (no matter the complexity):
 
 **The entire state of the application will be represented by one JavaScript object.**
 
-All changes and mutations to the application are explicit.
-These mutations, which include the data and the UI state, are contained in a single object we call the **state**.
+All mutations and changes to the state in Redux are explicit.
+
+Everything that changes in the application, including the data and the UI state, is contained in a single object called the **state** or **state tree**.
 
 Since the entire state is represented in a single object, we are able to keep track of changes over time
+
+**State in Todo App**
+```
+"current_state:"
+[object Object] {
+  todos: [[object Object] {
+    completed: true,
+    id: 0,
+    text: "hey",
+  }, [object Object] {
+    completed: false,
+    id: 1,
+    text: "ho",
+  }],
+  visibilityFilter: "SHOW_ACTIVE"
+}
+```
 
 # 02. Describing State Changes with Actions
 [Video Link](https://egghead.io/lessons/javascript-redux-describing-state-changes-with-actions?series=getting-started-with-redux)
