@@ -24,7 +24,7 @@ const mapStateToProps = (state) => {
 }
 ```
 
-Now we'll create another function called `mapDispatchToProps` that accepts the `dispatch()` from `store` as its only argument. It returns the props that should be passed to the `TodoList` component that depend on the `dispatch()` method. In the case of `TodoList`, the only prop that `TodoList` took that requires `store.dispatch()` is `onTodoClick`. So we will remove `onTodoClick` from `TodoList` and put it into `mapDispatchToProps`'s `return`. Note that we don't need the reference to `store` anymore, and can just change `store.dispatch()` to just `dispatch()`, which is provided as an argument to `matchDispatchToProps`.
+Now we'll create another function called `mapDispatchToProps` that accepts the `dispatch()` from `store` as its only argument. It returns the props that should be passed to the `TodoList` component that depend on the `dispatch()` method. In the case of `TodoList`, the only prop that `TodoList` took that requires `store.dispatch()` is `onTodoClick`. So we will remove `onTodoClick` from `TodoList` and put it into `mapDispatchToProps`'s `return`. Note that we don't need the reference to `store` anymore, and can just change `store.dispatch()` to just `dispatch()`, which is provided as an argument to `mapDispatchToProps`.
 
 ```JavaScript
 const mapDispatchToProps = (dispatch) => {
