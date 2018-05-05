@@ -98,7 +98,7 @@ Though `Footer` itself does not need the store, we must give it to `Footer` so w
 can pass it to `FilterLink`
 
 ```JavaScript
-const Footer = ({ store }) => {
+const Footer = ({ store }) => (
   <p>
     <FilterLink
       filter='SHOW_ALL'
@@ -109,7 +109,7 @@ const Footer = ({ store }) => {
     .
     . // Follow this pattern for the other `FilterLink` component references
     .
-}
+)
 ```
 
 ```JavaScript
