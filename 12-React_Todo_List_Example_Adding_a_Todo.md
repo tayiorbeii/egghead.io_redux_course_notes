@@ -176,7 +176,7 @@ It is common for React components to dispatch actions in Redux apps, however it'
 
 The `TodoApp` component assumes that it will receive `todos` as a prop, and it maps the items to display a list, using the `id` as a key (see the `<ul>` section in `TodoApp`).
 
-We render the `TodoApp` component inside the `render()` function that runs any time the state changes (as well as when the app is initilized.) The `render()` function reads the current state of the store and passes the array of todos to the TodoApp component as a prop via the line `<TodoApp todos={store.getState().todos} />`.
+We render the `TodoApp` component inside the `render()` function that runs any time the state changes (as well as when the app is initialized.) The `render()` function reads the current state of the store and passes the array of todos to the TodoApp component as a prop via the line `<TodoApp todos={store.getState().todos} />`.
 
 The `render()` function is called every time there is a change to the store, so the `todos` prop is always up to date.
 
