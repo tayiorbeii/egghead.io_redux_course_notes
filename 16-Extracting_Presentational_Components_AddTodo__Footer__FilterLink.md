@@ -131,7 +131,7 @@ return (
 #### Extracting the `FilterLink` Footer Elements
 Now we will create a new functional component called `Footer`. Since each `FilterLink` needs to know the `visibilityFilter`, we will make that a prop.
 
-We want the `Filter` and `FilterLink` to be presentational components, but in its current implementation each of the `FilterLink`s contain a `store.dispatch()` call. This call will be replaced by an `onClick` call that will take a single parameter with the filter. We also add `onClick` to `FilterLink`'s props.
+We want the `Footer` and `FilterLink` to be presentational components, but in its current implementation each of the `FilterLink`s contain a `store.dispatch()` call. This call will be replaced by an `onClick` call that will take a single parameter with the filter. We also add `onClick` to `FilterLink`'s props.
 
 Since `onClick` is now a prop for `FilterLink`, we need to specify it every time that `FilterLink` is used in our `Footer`. Adding `onClick={onFilterClick}` makes sure that `onClick` makes it to `FilterLink` as a prop.
 
