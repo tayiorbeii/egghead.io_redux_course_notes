@@ -11,7 +11,7 @@ In a way this breaks encapsulation because the parent components need to know to
 
 #### Extracting the `Footer` Component
 
-Currently the `Footer` component accepts the `visibilityFilter` and `onFilterClick()` callback as its props, but it _doesn't actually use either of them_. It just passes down to the `FilterLink`. We can only do this because we know that the `Footer` component doesn't care about the values of its props, as they only exist to pass down to `FilterLink`.
+Currently the `Footer` component accepts the `visibilityFilter` and `onFilterClick()` callback as its props, but it _doesn't actually use either of them_. It just passes down to the `FilterLink`. This is a good opportunity for simplification by removing the props `visibilityFilter` and `onFilterClick()`. We can only do this because we know that the `Footer` component doesn't care about the values of its props, as they only exist to pass down to `FilterLink`.
 
 We start by removing the props definition from the `Footer` component, and removing them from the `FilterLink`s as well.
 
