@@ -121,7 +121,7 @@ Now our `Todo` component is purely presentational. It doesn't specify any behavi
 #### Refactoring for the Todo List
 The `TodoList` component will accept an array of todos, and will render them into a `<ul>` by using the `todos.map()` function to render a `Todo` component for each todo item.
 
-We tell React to use each todo's `id` as the unique `key` for the elements, and we'll use the spread operator to send the `todo` object's `text` and `completed` properties are sent as props to the `Todo` component.
+We tell React to use each todo's `id` as the unique `key` for the elements, and we'll use the spread operator to send the `todo` object's `text` and `completed` properties as props to the `Todo` component.
 
 We need to specify what happens when a `Todo` is clicked. Since we want to keep this as a presentational component, instead of dispatching an action, we'll specify a function `onTodoClick()` and pass it `todo.id` so it can decide what needs to happen. We will also pass `onClick` (which calls `onTodoClick()`) as a prop to the `Todo` component.
 
