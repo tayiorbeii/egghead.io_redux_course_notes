@@ -11,11 +11,9 @@ For a working final product of these lessons, visit [@sadams' `todo-redux-react-
 
 ### Feel free to submit a PR!
 
-### Gitbook
+### HonKit
 
 ```
-npm i -g gitbook-cli
 npm install
-gitbook install
-gitbook serve
+npm run serve
 ```

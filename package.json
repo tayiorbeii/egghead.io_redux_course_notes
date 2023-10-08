@@ -4,7 +4,9 @@
   "description": "This repo contains notes from [Dan Abramov](https://github.com/gaearon)'s _excellent_ [Redux video series](https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "honkit build",
+    "serve": "honkit serve"
   },
   "repository": {
     "type": "git",
@@ -18,9 +20,11 @@
   },
   "homepage": "https://github.com/eggheadio/egghead.io_redux_course_notes#readme",
   "dependencies": {
-    "express": "^4.13.4",
     "gitbook-plugin-advanced-emoji": "^0.1.6",
-    "gitbook-plugin-hints": "^1.0.1",
+    "gitbook-plugin-hints": "^1.0.2",
     "gitbook-plugin-prism": "^1.0.0"
+  },
+  "devDependencies": {
+    "honkit": "^4.0.8"
   }
 }
